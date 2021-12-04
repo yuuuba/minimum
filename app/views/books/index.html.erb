@@ -1,9 +1,9 @@
 <h2>本棚</h2>
-
+<%= params %>
 <% @books.each do |book| %>
 <%= book.title %>
 <%= book.score %>
-<%= link_to "詳細",  %>
+<%= link_to "詳細", '/books/:id' %>
 <% end %>
 
-<br><%= link_to "本を追加する", '/bookshelf/new' %>
+<br><%= link_to "本を追加する", new_book_path %>

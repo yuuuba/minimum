@@ -4,6 +4,7 @@ class BooksController < ApplicationController
   end
 
   def show
+    @detail = Book.find_by(params[:id])
   end
 
   def new
@@ -11,8 +12,8 @@ class BooksController < ApplicationController
   end
 
   def create
-    @book = Book.create(book_params)
-    redirect_to bookshelf_path
+    @books = Book.create(book_params)
+    redirect_to books_path
   end
 
   def edit
