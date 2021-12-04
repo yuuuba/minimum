@@ -17,13 +17,15 @@ class BooksController < ApplicationController
   end
 
   def edit
-
+    @detail = Book.find_by(params[:id])
   end
 
   def update
+    @detail = Book.find_by(params[:id])
   end
 
   def destroy
+    @detail = Book.find_by(params[:id])
   end
 
   private

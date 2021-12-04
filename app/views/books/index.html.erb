@@ -4,6 +4,9 @@
 <%= book.title %>
 <%= book.score %>
 <%= link_to "詳細", '/books/:id' %>
+<%= link_to "編集", '/books/:id/edit'%>
+<%= link_to "更新", '#'%>
+<%= link_to "削除", 'books#destroy' %>
 <% end %>
 
 <br><%= link_to "本を追加する", new_book_path %>
