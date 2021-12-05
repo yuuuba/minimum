@@ -2,5 +2,6 @@
 <% @books.each do |book| %>
 <%= book.name %>
 <%= book.price %>
+<%= link_to "詳細" , book_path(book) %>
 <% end %>
 <%= link_to "本を追加する" , new_book_path %>
