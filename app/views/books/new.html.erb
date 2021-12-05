@@ -1,8 +1,0 @@
-<h2>本を追加する<h2>
-<%= params %>
-<%= form_with model: @book , url: books_path do |f| %> #errorbookshelf_pathですか？
-  <%= f.text_field :title %>
-  <%= f.number_field :score %>
-  <%= f.submit %>
-<% end %>
-<%= link_to "戻る", books_path %>
