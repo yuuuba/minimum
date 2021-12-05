@@ -12,12 +12,12 @@ class BooksController < ApplicationController
   end
 
   def create
-    @book = Book.create(:name, :price)
+    @book = Book.create(book_params)
+    redirect_to books_path
   end
   
   private
   def book_params
-    binding.pry
     params.require(:book).permit(:name, :price)
   end
 
