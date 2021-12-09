@@ -25,7 +25,7 @@ class BooksController < ApplicationController
 
   def update
     if @book.update(book_params)
-      render books_path
+      redirect_to books_path
     end
   end
 
