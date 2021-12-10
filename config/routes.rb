@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  resources :books, only: [:index , :new , :show, :create, :edit , :update]
+  resources :books, only: [:index , :new , :show, :create, :edit , :update, :destroy]
 end
