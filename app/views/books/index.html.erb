@@ -4,5 +4,6 @@
 <%= book.price %>
 <%= link_to "詳細" , book_path(book) %>
 <%= link_to "編集" , edit_book_path(book) %>
+<%= link_to "削除" , book_path(book), method: :delete %><br>
 <% end %>
 <%= link_to "本を追加する" , new_book_path %>
