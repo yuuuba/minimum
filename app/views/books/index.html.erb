@@ -1,9 +1,10 @@
-<p>テスト</p>
+<h2>本一覧</h2>
 <% @books.each do |book| %>
-<%= book.name %>
-<%= book.price %>
-<%= link_to "詳細" , book_path(book) %>
-<%= link_to "編集" , edit_book_path(book) %>
-<%= link_to "削除" , book_path(book), method: :delete %><br>
+  <%= book.name %>
+  <%= book.price %>
+  <%= link_to "詳細" , book_path(book) %>
+  <%= link_to "編集" , edit_book_path(book) %>
+  <%= link_to "削除" , book_path(book), method: :delete, data: {confirm: "削除しますか？" } %><br>
 <% end %>
+
 <%= link_to "本を追加する" , new_book_path %>
