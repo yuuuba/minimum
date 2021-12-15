@@ -10,11 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_05_064135) do
+ActiveRecord::Schema.define(version: 2021_12_15_003037) do
 
   create_table "books", charset: "utf8mb4", force: :cascade do |t|
     t.string "name"
     t.integer "price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "readers", charset: "utf8mb4", force: :cascade do |t|
+    t.string "name"
+    t.integer "book_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
