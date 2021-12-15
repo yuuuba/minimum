@@ -1,4 +1,12 @@
 <h2>詳細</h2>
 <%= @book.name %>
 <%= @book.price %>
+
+<h2>この本を読んだ人</h2>
+<ul>
+  <% @book.readers.each do |b| %> 
+    <li><%= b.name %></li>
+  <% end %>
+
+</ul>
 <%= link_to "戻る" , books_path %>
