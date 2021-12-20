@@ -1,8 +1,17 @@
 <h2>新規追加</h2>
-<%= form_with model: @book do |f|%>
-  <%= f.text_field :name %>
-  <%= f.number_field :price %>
-  <%= f.submit %>
+<%= form_with model: @book do |b|%>
+  <p>タイトル</p>
+  <%= b.text_field :name %>
+  <p>値段</p>
+  <%= b.number_field :price %>
+  <%= b.submit %>
 <% end %>
+
+<%= form_with model: @reader do |r|%>
+  <p>読者の名前</p>
+  <%= r.text_field :name %>
+  <%= r.submit %>
+<% end %>
+
 
 <%= link_to "戻る" , books_path %>
