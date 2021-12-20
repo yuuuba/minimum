@@ -10,6 +10,7 @@ class BooksController < ApplicationController
   
   def new
     @book = Book.new
+    @reader = Reader.new
   end
 
   def create
